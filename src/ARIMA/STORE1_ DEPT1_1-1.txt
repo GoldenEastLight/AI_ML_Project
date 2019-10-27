@@ -1,0 +1,6 @@
+import pandas as pd
+
+series = pd.read_csv('/content/STORE1_DEPT1.csv', header=0, index_col=0, squeeze=True)
+# 일정 구간 추출 (너무 많으면 계산이 어려움)
+series = series.truncate(before='2010-02-05', after='2012-10-26')
+series.plot(figsize=(20, 5))

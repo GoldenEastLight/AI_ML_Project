@@ -1,0 +1,5 @@
+from statsmodels.tsa.arima_model import ARIMA
+
+model = ARIMA(series, order=(8,1,0))
+model_fit = model.fit(trend='nc',full_output=True, disp=1)
+print(model_fit.summary())

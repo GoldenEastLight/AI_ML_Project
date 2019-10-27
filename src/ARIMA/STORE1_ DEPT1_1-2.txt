@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+from pandas.plotting import autocorrelation_plot
+
+fig, ax = plt.subplots(figsize=(20, 5))
+plot_acf(series, ax=ax)
+fig, ax = plt.subplots(figsize=(20, 5))
+plot_pacf(series, ax=ax)
+fig, ax = plt.subplots(figsize=(20, 5))
+autocorrelation_plot(series, ax=ax)
+plt.show()
