@@ -1,0 +1,2 @@
+forecast, stderr, conf_int = model_fit.forecast(steps=10)
+print(forecast)
